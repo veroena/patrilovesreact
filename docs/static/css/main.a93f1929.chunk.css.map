@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,QACE,YAAa,CACb,WAAY,CACZ,qBAAuB,CACvB,eACF,CAEA,KACE,oBACF,CAEA,MACE,qBACF","file":"main.a93f1929.chunk.css","sourcesContent":[".square {\n  height: 100px;\n  width: 100px;\n  border: solid 1px black;\n  margin-top: 20px;\n}\n\n.red {\n  background-color: red;\n}\n\n.blue {\n  background-color: blue;\n}"]}

@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      red: true
+    }
+    this.changeToBlue = this.changeToBlue.bind(this);
+    this.changeToRed = this.changeToRed.bind(this);
+  }
+
+  changeToBlue() {
+    this.setState({red: false});
+  }
+
+  changeToRed() {
+    this.setState({red: true});
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <button className="btn btn1" onClick={this.changeToRed}>Red</button>
+        <button className="btn btn2" onClick={this.changeToBlue}>Blue</button>
+        <div className={`square ${this.state.red ? 'red' : 'blue'}`}></div>
+      </div>
+    );
+  }
 }
 
 export default App;
